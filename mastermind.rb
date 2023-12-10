@@ -18,11 +18,6 @@ class Mastermind
     @turns = 0
   end
 
-  def display
-    # colored_code = @code.map { |color| display_color(color) }
-    puts @colored_code.join(" ")
-  end
-
   # Method to get the ANSI color code
   def color_code(color_name)
     ANSI_COLORS[color_name] || color_name # Returns the ANSI code or the original color name if not found
@@ -97,5 +92,4 @@ end
 
 mastermind = Mastermind.new
 
-mastermind.display
 mastermind.play
